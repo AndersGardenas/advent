@@ -5,3 +5,4 @@ import java.io.FileNotFoundException
 
 fun fileToStringList(fileName: String): List<String>
         = File(fileName).useLines { it.toList() }
+
