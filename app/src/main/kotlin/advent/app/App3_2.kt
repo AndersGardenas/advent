@@ -19,7 +19,6 @@ fun main() {
     println(matches)
 
 }
-
 fun isTreeIndexed(line: String, xJump: Int): Boolean {
     pos = (pos + xJump) % width
     return line[pos] == '#'
