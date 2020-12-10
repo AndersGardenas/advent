@@ -2,8 +2,12 @@ package advent.app
 
 
 fun main() {
+    val start = System.currentTimeMillis()
+
     val file = fileToStringList("app/src/main/kotlin/input/input8_1.txt")
+
     val acc = file.foldIndexed(0){ index, sum, _ ->  sum + validAndCompute(file,index) }
+    println(System.currentTimeMillis() - start)
     print(acc)
 }
 
