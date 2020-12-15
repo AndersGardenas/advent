@@ -10,18 +10,17 @@ fun main() {
     var newVal = ids[0].first
     ids = ids.drop(1)
     ids = ids.sortedBy { -it.first }
+    var n = 0
     for (id in ids) {
         newVal += iter
+        n++
         val modDiff = (10* id.first - id.second) % id.first
         while (((newVal)  % id.first) != modDiff){
             newVal += iter
+            n++
         }
         iter *= id.first
     }
     println(newVal)
+    println(n)
 }
-//Iter
-//23
-//11569
-//4430927
-//181668007
